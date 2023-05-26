@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h2>Download Your Ticket Here</h2>
+
+	<form th:action="@{/getTicket}">
+		<table>
+
+			<tr>
+				<td>Tickect Number :</td>
+				<td><input type="text" name="ticketNum"></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="submit"></td>
+			</tr>
+		</table>
+		<hr>
+		Ticket Number : <p th:text="${ticket.ticketNumber}"></p>
+		Ticket Status : <p th:text="${ticket.status}"></p>
+		Ticket Cost :<p th:text="${ticket.ticketCost}"></p>
+		Passanger Name<p th:text="${ticket.name}"></p>
+		Date Of Journy :<p th:text="${ticket.doj}"></p>
+		From :<p th:text="${ticket.from}"></p>
+		To :<p th:text="${ticket.to}"></p>
+		Train Number :<p th:text="${ticket.trainNumber}"></p>
+
+	</form>
+</body>
+</html>
